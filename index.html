@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adam Machowina - Certyfikowany Coach ICC</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {font-family: 'Segoe UI', sans-serif; color: #333; background-color: #f8f9fa; line-height: 1.6; scroll-behavior: smooth;}
+    header {background-color: #0d6efd; color: white; padding: 60px 20px; text-align: center;}
+    .profile-img {width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin: 20px auto; display: block; border: 4px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.15);}
+    nav {background-color: #0a58ca; display: flex; justify-content: center; gap: 20px; padding: 10px;}
+    nav a {color: white; text-decoration: none; font-weight: bold;}
+    section {padding: 50px 20px; max-width: 1000px; margin: auto;}
+    h2 {margin-bottom: 20px; color: #0d6efd;}
+    /* Oś doświadczenia */
+    .timeline {border-left: 3px solid #0d6efd; padding-left: 20px;}
+    .timeline-item {margin-bottom: 30px;}
+    .timeline-item h3 {margin-bottom: 5px; color: #0d6efd;}
+    .timeline-item span {font-size: 0.9em; color: #555;}
+    /* Kompetencje */
+    .skills-list {list-style: none; padding-left: 0;}
+    .skills-list li {background: white; padding: 15px; margin-bottom: 10px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    /* CTA */
+    .cta-button {display: inline-block; margin-top: 20px; padding: 12px 24px; background-color: #0d6efd; color: white; border-radius: 4px; text-decoration: none; font-weight: bold;}
+    .cta-button:hover {background-color: #0b5ed7;}
+    /* Formularz */
+    form {display: flex; flex-direction: column;}
+    input, textarea {padding: 10px; margin-bottom: 15px; border-radius: 4px; border: 1px solid #ccc; font-size: 16px;}
+    button {background-color: #0d6efd; color: white; padding: 12px; border: none; font-size: 16px; border-radius: 4px; cursor: pointer;}
+    button:hover {background-color: #0b5ed7;}
+    footer {text-align: center; padding: 20px; background-color: #0a58ca; color: white; margin-top: 40px;}
+    /* Podział "W czym mogę pomóc" */
+    .help-section {display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 20px;}
+    .help-block {background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Adam Machowina <br> Certyfikowany Coach ICC</h1>
+  <img src="face.png" alt="Adam Machowina" class="profile-img">
+  <p>Pomagam ludziom rozwijać się, odnajdywać w zmianach i działać z większą pewnością siebie.<br>Zapraszam Cię na pierwszą bezpłatną konsultację — porozmawiajmy o Twoich wyzwaniach i celach.</p>
+</header>
+
+<nav>
+  <a href="#doswiadczenie">Doświadczenie</a>
+  <a href="#kompetencje">Kompetencje</a>
+  <a href="#pomoc">Coaching</a>
+  <a href="#kontakt">Kontakt</a>
+</nav>
+
+<section id="doswiadczenie">
+  <h2>Doświadczenie zawodowe</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>Global Business Lead, Program Force</h3>
+      <span>Signify, Piła | 2025–obecnie</span>
+      <p>Wspieranie zespołów projektowych wszystkich organizacji Signify.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>CI Master</h3>
+      <span>Signify, Piła | 2024–obecnie</span>
+      <p>Wspieranie zakładów produkcyjnych grupy Operations Consumer oraz OEM w transformacji Lean.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Continuous Improvement Manager</h3>
+      <span>Signify, Piła | 2021–2024</span>
+      <p>Zbudowanie zespołu CI oraz zarządzanie procesem w czterech fabrykach w Pile.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Lean Expert / Excellence Master</h3>
+      <span>Philips Lighting, Warszawa | 2016–2021</span>
+      <p>Zbudowanie zespołów CI dla 8 rynków sprzedażowych w Europie.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Black Belt, Business Transformation Europe</h3>
+      <span>Philips Lighting, Piła | 2012–2016</span>
+      <p>Prowadzenie projektów globalnych oraz programu budowania kompetencji Six Sigma.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Industrial Engineering Manager</h3>
+      <span>Philips Lighting, Piła | 2008–2011</span>
+      <p>Prowadzenie zespołu inżynierów ds. relacji przemysłowych.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Role IT</h3>
+      <span>Philips Lighting, Piła | 2000–2008</span>
+      <p>Administracja sieciami, serwerami, prowadzenie projektów IT.</p>
+    </div>
+  </div>
+</section>
+
+<section id="kompetencje">
+  <h2>Kompetencje i certyfikacje</h2>
+  <ul class="skills-list">
+    <li><strong>Coach ICC</strong> – Prowadzenie sesji coachingowych zgodnie z metodyką ICC.</li>
+    <li><strong>Lean Master</strong> – Prowadzenie transformacji Lean.</li>
+    <li><strong>Project Management Professional (PMP)</strong> – Zarządzanie złożonymi projektami wg metodyki PMI.</li>
+    <li><strong>Trener Lean & Six Sigma</strong> – Szkolenia i certyfikacja z zakresu Lean, DMAIC, A3 Problem Solving.</li>
+    <li><strong>IT Developer</strong> – Automatyzacje w oparciu o Power Platform i UIPath.</li>
+  </ul>
+</section>
+
+<section id="pomoc">
+  <h2>W czym mogę Ci pomóc?</h2>
+  <div class="help-section">
+    <div class="help-block">
+      <h3>Rozwój osobisty</h3>
+      <p>Lepsze poznanie siebie, swoich wartości i motywacji.</p>
+    </div>
+    <div class="help-block">
+      <h3>Zmiana zawodowa</h3>
+      <p>Wsparcie w odnalezieniu się w zmianach zawodowych lub życiowych.</p>
+    </div>
+    <div class="help-block">
+      <h3>Komunikacja i pewność siebie</h3>
+      <p>Praca nad asertywnością, autoprezentacją i efektywną komunikacją.</p>
+    </div>
+    <div class="help-block">
+      <h3>Realizacja celów</h3>
+      <p>Wyznaczanie i osiąganie celów z większą lekkością i satysfakcją.</p>
+    </div>
+    <div class="help-block">
+      <h3>Równowaga i odporność</h3>
+      <p>Budowanie wewnętrznej równowagi, radzenie sobie ze stresem i wyzwaniami dnia codziennego.</p>
+    </div>
+    <div class="help-block">
+      <h3>Rozwój kariery i przywództwo</h3>
+      <p>Przygotowanie do nowych ról, rozwijanie kompetencji liderskich i świadome planowanie kariery.</p>
+    </div>
+  </div>
+  <a class="cta-button" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3ddERmTaY79ol596pXP1MiBkDuA-fl3CryI427GKMK0MObYs1araMghmHB_1bqO8wMrv2JCrrz" target="_blank">Umów się na bezpłatną konsultację</a>
+</section>
+
+
+<section id="kontakt">
+  <h2>Formularz kontaktowy</h2>
+  <p>Masz pytanie lub chcesz się ze mną skontaktować? Wypełnij formularz:</p>
+  <form action="https://formsubmit.co/karotyn56@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="name" placeholder="Imię i nazwisko" required>
+    <input type="email" name="email" placeholder="Adres e-mail" required>
+    <textarea name="message" rows="5" placeholder="Wiadomość" required></textarea>
+    <button type="submit">Wyślij wiadomość</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 Adam Machowina | adam.machowina@gmail.com
+</footer>
+
+</body>
+</html>
