@@ -1,8 +1,8 @@
-# Personal Website - Adam Machowina
+# Personal Website - Adam Machowina 👤
 
 This is a simple, responsive website showcasing the professional profile of Adam Machowina — a certified ICC Coach, Lean Master and Project Manager.
 
-## Features
+## Features ✨
 
 - Welcome section with name, photo, and description
 - Navigation with a hamburger menu for mobile devices
@@ -13,13 +13,13 @@ This is a simple, responsive website showcasing the professional profile of Adam
 - "Back to Top" button for easy scrolling
 - Responsive design adapted to different screen sizes
 
-## Technologies
+## Technologies 💻
 
 - HTML5
 - CSS3 (including Flexbox and Grid)
 - JavaScript (menu, scroll animations, back-to-top button)
 
-## How to Access
+## How to Access 🔗
 
 - GitHub Pages:  
   https://mateuszmachowina.github.io/AdamMachowinaCoaching/
