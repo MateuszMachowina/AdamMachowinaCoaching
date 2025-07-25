@@ -18,6 +18,7 @@ This is a simple, responsive website showcasing the professional profile of Adam
 - HTML5
 - CSS3 (including Flexbox and Grid)
 - JavaScript (menu, scroll animations, back-to-top button)
+- FormSubmit (handling contact form submissions)
 
 ## How to Access 🔗
 
