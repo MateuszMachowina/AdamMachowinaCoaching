@@ -9,9 +9,11 @@
     body {font-family: 'Segoe UI', sans-serif; color: #333; background-color: #f8f9fa; line-height: 1.6; scroll-behavior: smooth;}
     header {background-color: #0d6efd; color: white; padding: 60px 20px; text-align: center;}
     .profile-img {width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin: 20px auto; display: block; border: 4px solid white; box-shadow: 0 0 10px rgba(0,0,0,0.15);}
-    nav {background-color: #0a58ca; display: flex; justify-content: center; gap: 20px; padding: 10px;}
-    nav a {color: white; text-decoration: none; font-weight: bold;}
-    section {padding: 50px 20px; max-width: 1000px; margin: auto;}
+    nav {background-color: #0a58ca; display: flex; justify-content: center; gap: 20px; padding: 10px; flex-wrap: wrap;}
+    nav a {color: white; text-decoration: none; font-weight: bold; transition: 0.3s;}
+    nav a:hover {text-decoration: underline;}
+    section {padding: 50px 20px; max-width: 1000px; margin: auto; opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease;}
+    section.visible {opacity: 1; transform: translateY(0);}
     h2 {margin-bottom: 20px; color: #0d6efd;}
     /* Oś doświadczenia */
     .timeline {border-left: 3px solid #0d6efd; padding-left: 20px;}
@@ -20,19 +22,28 @@
     .timeline-item span {font-size: 0.9em; color: #555;}
     /* Kompetencje */
     .skills-list {list-style: none; padding-left: 0;}
-    .skills-list li {background: white; padding: 15px; margin-bottom: 10px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    .skills-list li {background: white; padding: 15px; margin-bottom: 10px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;}
+    .skills-list li:hover {transform: translateY(-4px); box-shadow: 0 4px 12px rgba(0,0,0,0.15);}
     /* CTA */
-    .cta-button {display: inline-block; margin-top: 20px; padding: 12px 24px; background-color: #0d6efd; color: white; border-radius: 4px; text-decoration: none; font-weight: bold;}
+    .cta-button {display: inline-block; margin-top: 20px; padding: 12px 24px; background-color: #0d6efd; color: white; border-radius: 4px; text-decoration: none; font-weight: bold; transition: background 0.3s;}
     .cta-button:hover {background-color: #0b5ed7;}
     /* Formularz */
     form {display: flex; flex-direction: column;}
     input, textarea {padding: 10px; margin-bottom: 15px; border-radius: 4px; border: 1px solid #ccc; font-size: 16px;}
-    button {background-color: #0d6efd; color: white; padding: 12px; border: none; font-size: 16px; border-radius: 4px; cursor: pointer;}
+    button {background-color: #0d6efd; color: white; padding: 12px; border: none; font-size: 16px; border-radius: 4px; cursor: pointer; transition: 0.3s;}
     button:hover {background-color: #0b5ed7;}
     footer {text-align: center; padding: 20px; background-color: #0a58ca; color: white; margin-top: 40px;}
     /* Podział "W czym mogę pomóc" */
     .help-section {display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 20px;}
-    .help-block {background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    .help-block {background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;}
+    .help-block:hover {transform: translateY(-4px); box-shadow: 0 4px 12px rgba(0,0,0,0.15);}
+    .help-block h3 {color: #0d6efd; margin-bottom: 10px;}
+    /* Responsywność */
+    @media (max-width: 768px) {
+      header {padding: 40px 10px;}
+      section {padding: 30px 10px;}
+      nav {gap: 10px;}
+    }
   </style>
 </head>
 <body>
@@ -133,7 +144,6 @@
   <a class="cta-button" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3ddERmTaY79ol596pXP1MiBkDuA-fl3CryI427GKMK0MObYs1araMghmHB_1bqO8wMrv2JCrrz" target="_blank">Umów się na bezpłatną konsultację</a>
 </section>
 
-
 <section id="kontakt">
   <h2>Formularz kontaktowy</h2>
   <p>Masz pytanie lub chcesz się ze mną skontaktować? Wypełnij formularz:</p>
@@ -149,6 +159,21 @@
 <footer>
   &copy; 2025 Adam Machowina | adam.machowina@gmail.com | developed by github.com/MateuszMachowina
 </footer>
+
+<script>
+  // Animacja fade-in przy przewijaniu
+  const sections = document.querySelectorAll('section');
+  const revealOnScroll = () => {
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        section.classList.add('visible');
+      }
+    });
+  };
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+</script>
 
 </body>
 </html>
