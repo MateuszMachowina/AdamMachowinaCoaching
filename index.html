@@ -253,13 +253,14 @@
 </section>
 
 <section id="kontakt">
-  <h2>Kontakt</h2>
-  <form>
-    <input type="text" placeholder="Imię i nazwisko" required />
-    <input type="email" placeholder="Email" required />
-    <textarea rows="5" placeholder="Wiadomość" required></textarea>
-    <button type="submit">Wyślij</button>
-  </form>
+    <h2>Formularz kontaktowy</h2>
+    <form action="https://formsubmit.co/dbcc5a50acdef80704ba53c9bcaf8c88" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="name" placeholder="Imię i nazwisko" required>
+      <input type="email" name="email" placeholder="Adres e-mail" required>
+      <textarea name="message" rows="5" placeholder="Wiadomość" required></textarea>
+      <button type="submit">Wyślij wiadomość</button>
+    </form>
 </section>
 
 <footer>
