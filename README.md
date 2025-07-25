@@ -1,6 +1,6 @@
 # Personal Website - Adam Machowina
 
-This is a simple, responsive website showcasing the professional profile of Adam Machowina — a certified ICC Coach, Lean specialist, and Project Manager.
+This is a simple, responsive website showcasing the professional profile of Adam Machowina — a certified ICC Coach, Lean Master and Project Manager.
 
 ## Features
 
