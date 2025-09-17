@@ -9,6 +9,7 @@ This is a simple, responsive website showcasing the professional profile of Adam
 - Overview of coaching support areas
 - List of skills and certifications
 - Timeline of professional experience
+- Documents and attachments
 - Contact form
 - "Back to Top" button for easy scrolling
 - Responsive design adapted to different screen sizes
