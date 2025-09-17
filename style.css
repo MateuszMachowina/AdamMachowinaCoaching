@@ -51,7 +51,7 @@
     /* Sekcje */
     section {padding: 50px 20px; max-width: 1000px; margin: auto; opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease;}
     section.visible {opacity: 1; transform: translateY(0);}
-    h2 {margin-bottom: 20px; color: #0d6efd;}
+    h2 {text-align: left; margin-bottom: 20px; color: #0d6efd;}
 
     /* Oś doświadczenia */
     .timeline {border-left: 3px solid #0d6efd; padding-left: 20px;}
@@ -134,11 +134,6 @@
     }
 
     /* Sekcja dokumentów */
-    #dokumenty {
-      text-align: left;
-      margin-bottom: 20px; 
-      color: #0d6efd;      
-    }
     .document-thumb {
       background: white;
       border-radius: 8px;
@@ -162,5 +157,6 @@
       color: #333;
       margin: 0;
     }
+
 
 
