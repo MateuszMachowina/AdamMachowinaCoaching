@@ -4,148 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adam Machowina - Certyfikowany Coach ICC</title>
-  <style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
-    body {font-family: 'Segoe UI', sans-serif; color: #333; background-color: #f8f9fa; line-height: 1.6; scroll-behavior: smooth;}
-    h1, h2, h3 {line-height: 1.2;}
-    a {text-decoration: none;}
-
-    /* Nagłówek */
-    header {background-color: #0d6efd; color: white; padding: 60px 20px;}
-    .header-container {display: flex; align-items: center; justify-content: center; gap: 40px; max-width: 1100px; margin: auto; flex-wrap: wrap;}
-    .header-text {flex: 1; min-width: 280px;}
-    .header-text h1 {font-size: 2.2rem; margin-bottom: 5px;}
-    .subtitle {font-size: 1.5rem; color: rgba(255, 255, 255, 0.95); margin-bottom: 8px; font-weight: 650;}
-    .header-text p {font-size: 1.1rem;}
-    .profile-img {width: 180px; height: 180px; object-fit: cover; border-radius: 50%; border: 5px solid white; box-shadow: 0 0 15px rgba(0,0,0,0.15);}
-    .cta-button {display: inline-block; margin-top: 20px; padding: 12px 24px; background-color: #ffc107; color: #333; border-radius: 4px; font-weight: bold; transition: background 0.3s;}
-    .cta-button:hover {background-color: #e0a800;}
-
-    /* Menu */
-    nav {background-color: #0a58ca; display: flex; justify-content: center; gap: 20px; padding: 12px; flex-wrap: wrap;}
-    nav a {color: white; font-weight: bold; transition: 0.3s;}
-    nav a:hover {text-decoration: underline;}
-
-    /* Hamburger */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      justify-content: space-around;
-      width: 30px;
-      height: 24px;
-      cursor: pointer;
-    }
-    .hamburger div {
-      width: 30px;
-      height: 3px;
-      background-color: white;
-      border-radius: 3px;
-      transition: all 0.3s linear;
-      position: relative;
-      transform-origin: 1px;
-    }
-    .hamburger.active div:nth-child(1) {
-      transform: rotate(45deg);
-    }
-    .hamburger.active div:nth-child(2) {
-      opacity: 0;
-      transform: translateX(20px);
-    }
-    .hamburger.active div:nth-child(3) {
-      transform: rotate(-45deg);
-    }
-
-    /* Sekcje */
-    section {padding: 50px 20px; max-width: 1000px; margin: auto; opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease;}
-    section.visible {opacity: 1; transform: translateY(0);}
-    h2 {margin-bottom: 20px; color: #0d6efd;}
-
-    /* Oś doświadczenia */
-    .timeline {border-left: 3px solid #0d6efd; padding-left: 20px;}
-    .timeline-item {margin-bottom: 30px;}
-    .timeline-item h3 {margin-bottom: 5px; color: #343a40;} /* ciemniejszy kolor */
-    .timeline-item span {font-size: 0.9em; color: #555;}
-
-    /* Kompetencje */
-    .skills-list {list-style: none; padding-left: 0;}
-    .skills-list li {background: white; padding: 15px; margin-bottom: 10px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;}
-    .skills-list li:hover {transform: translateY(-4px); box-shadow: 0 4px 12px rgba(0,0,0,0.15);}
-
-    /* W czym mogę pomóc */
-    .help-section {display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 20px;}
-    .help-block {background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease;}
-    .help-block:hover {transform: translateY(-4px); box-shadow: 0 4px 12px rgba(0,0,0,0.15);}
-    .help-block h3 {color: #343a40; margin-bottom: 10px;} /* ciemniejszy kolor */
-    .cta-button-secondary {display: none; margin-top: 20px; padding: 12px 24px; background-color: #0d6efd; color: white; border-radius: 4px; font-weight: bold; transition: background 0.3s;}
-    .cta-button-secondary:hover {background-color: #0b5ed7;}
-
-    /* Formularz */
-    form {display: flex; flex-direction: column;}
-    input, textarea {padding: 10px; margin-bottom: 15px; border-radius: 4px; border: 1px solid #ccc; font-size: 16px;}
-    button {background-color: #0d6efd; color: white; padding: 12px; border: none; font-size: 16px; border-radius: 4px; cursor: pointer; transition: 0.3s;}
-    button:hover {background-color: #0b5ed7;}
-
-    /* Stopka */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #0a58ca;
-      color: white;
-      margin-top: 40px;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    footer p {
-      margin: 5px 0;
-    }
-    footer a {
-      color: white;
-      text-decoration: underline;
-    }
-    footer .github-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-    footer .github-icon {
-      width: 20px;
-      height: 20px;
-      fill: white;
-    }
-
-    /* Przycisk do góry */
-    #toTop {position: fixed; bottom: 20px; right: 20px; display: none; background: #0d6efd; color: white; padding: 10px 15px; border-radius: 50%; border: none; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2); font-size: 18px;}
-    #toTop:hover {background: #0b5ed7;}
-
-    /* Responsywność */
-    @media (max-width: 768px) {
-      .header-container {flex-direction: column; text-align: center;}
-      .profile-img {margin-bottom: 20px;}
-      nav {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        padding: 12px 20px;
-        background-color: #0a58ca;
-      }
-      nav.active {
-        display: flex;
-      }
-      nav a {padding: 10px 0;}
-      .hamburger {
-        display: flex;
-        position: fixed;
-        top: 18px;
-        right: 20px;
-        z-index: 1000;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header>
   <div class="header-container">
-    <img src="face.png" alt="Adam Machowina" class="profile-img">
+    <img src="/assets/face.png" alt="Adam Machowina" class="profile-img">
     <div class="header-text">
       <h1>Adam Machowina</h1>
       <p class="subtitle">Certyfikowany Coach ICC</p>
@@ -155,8 +21,7 @@
   </div>
 </header>
 
-<!-- Hamburger -->
-<div class="hamburger" id="hamburger">
+<div class="hamburger" id="hamburger" aria-label="Menu nawigacyjne" role="button">
   <div></div>
   <div></div>
   <div></div>
@@ -214,41 +79,19 @@
 <section id="doswiadczenie">
   <h2>Doświadczenie zawodowe</h2>
   <div class="timeline">
-    <div class="timeline-item">
-      <h3>Global Business Lead, Program Force</h3>
-      <span>Signify, Piła | 2025–obecnie</span>
-      <p>Wspieranie zespołów projektowych wszystkich organizacji Signify.</p>
+    <!-- timeline-itemy tutaj -->
+  </div>
+</section>
+
+<section id="dokumenty">
+  <h2>Dokumenty</h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper" id="docs-carousel">
+      <!-- Dokumenty zostaną wczytane z JS -->
     </div>
-    <div class="timeline-item">
-      <h3>CI Master</h3>
-      <span>Signify, Piła | 2024–obecnie</span>
-      <p>Wspieranie zakładów produkcyjnych grupy Operations Consumer oraz OEM w transformacji Lean.</p>
-    </div>
-    <div class="timeline-item">
-      <h3>Continuous Improvement Manager</h3>
-      <span>Signify, Piła | 2021–2024</span>
-      <p>Zbudowanie zespołu CI oraz zarządzanie procesem w czterech fabrykach w Pile.</p>
-    </div>
-    <div class="timeline-item">
-      <h3>Lean Expert / Excellence Master</h3>
-      <span>Philips Lighting, Warszawa | 2016–2021</span>
-      <p>Zbudowanie zespołów CI dla 8 rynków sprzedażowych w Europie.</p>
-    </div>
-    <div class="timeline-item">
-      <h3>Black Belt, Business Transformation Europe</h3>
-      <span>Philips Lighting, Piła | 2012–2016</span>
-      <p>Prowadzenie projektów globalnych oraz programu budowania kompetencji Six Sigma.</p>
-    </div>
-    <div class="timeline-item">
-      <h3>Industrial Engineering Manager</h3>
-      <span>Philips Lighting, Piła | 2008–2011</span>
-      <p>Prowadzenie zespołu inżynierów ds. relacji przemysłowych.</p>
-    </div>
-    <div class="timeline-item">
-      <h3>Stanowiska IT</h3>
-      <span>Philips Lighting, Piła | 2000–2008</span>
-      <p>Administracja sieciami, serwerami, prowadzenie projektów IT.</p>
-    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
   </div>
 </section>
 
@@ -268,61 +111,15 @@
   <p style="font-size: 0.9em; color: #cfd8dc;">
     Strona zaprojektowana i rozwijana przez 
     <a href="https://github.com/MateuszMachowina" target="_blank" class="github-link">
-      <svg class="github-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 012.5-.34 9.5 9.5 0 012.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10 10 0 0022 12c0-5.52-4.48-10-10-10z"/>
-      </svg>
-      Mateusz Machowina
+      <!-- GitHub SVG -->
     </a>
   </p>
 </footer>
 
 <button id="toTop" title="Do góry">↑</button>
 
-<script>
-  // Animacja menu hamburger i autozamykanie
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('nav-menu');
-
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-  });
-
-  // Zamknij menu po kliknięciu na link (tylko na mobile)
-  navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      if(window.innerWidth <= 768){
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-      }
-    });
-  });
-
-  // Pojawianie sekcji na scroll
-  const sections = document.querySelectorAll('section');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-      }
-    });
-  }, {threshold: 0.1});
-
-  sections.forEach(section => observer.observe(section));
-
-  // Przycisk "Do góry"
-  const toTopBtn = document.getElementById('toTop');
-  window.addEventListener('scroll', () => {
-    if(window.scrollY > 300){
-      toTopBtn.style.display = 'block';
-    } else {
-      toTopBtn.style.display = 'none';
-    }
-  });
-  toTopBtn.addEventListener('click', () => {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-  });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
