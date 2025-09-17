@@ -133,31 +133,34 @@
       }
     }
 
-        /* Sekcja dokumentów */
-      #dokumenty {
-        text-align: center;
-      }
-      .document-thumb {
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        padding: 20px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-align: center;
-      }
-      .document-thumb:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-      }
-      .document-thumb svg {
-        width: 60px;
-        height: 80px;
-        fill: #E53935; /* czerwony PDF */
-        margin-bottom: 10px;
-      }
-      .document-thumb p {
-        font-weight: bold;
-        color: #333;
-        margin: 0;
-      }
+    /* Sekcja dokumentów */
+    #dokumenty {
+      text-align: left;
+      margin-bottom: 20px; 
+      color: #0d6efd;      
+    }
+    .document-thumb {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+    .document-thumb:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    }
+    .document-thumb svg {
+      width: 60px;
+      height: 80px;
+      fill: #E53935; /* czerwony PDF */
+      margin-bottom: 10px;
+    }
+    .document-thumb p {
+      font-weight: bold;
+      color: #333;
+      margin: 0;
+    }
+
 
