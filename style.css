@@ -159,4 +159,29 @@
     }
 
 
+  /* Sekcja wystąpień*/
+.speaking-block {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.speaking-image img {
+  width: 420px;
+  max-width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.speaking-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+
+
 
